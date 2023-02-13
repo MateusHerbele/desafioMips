@@ -13,15 +13,17 @@ SEP: .asciiz ", "
 	la $t3, SOMA   # Carrega o endereco (nao o valor) de SOMA para $t3
 
 ########################################################################
-## Escreva aqui seu cÛdigo!
+## Escreva aqui seu c√≥digo!
 ########################################################################
-	sll $t0, $t0, 2
-loop:	blt $t0, $zero, FIMSOMA #Inicia o looping
-	addi $t0, $t0, -4 #Sutrai 4 no TAM 
-	lw $t5, TAM($t1) #Carrega o valor que est· equivalente pelo valor TAM em T1 para t5
-	lw $t6, TAM($t2) #Carrega o valor que est· equivalente pelo valor TAM em T2 para t6
-	lw $t3, TAM($t3) #Carrega o valor que est· equivalente pelo valor TAM em T3
-	add $t3, $t5, $t6 #Soma os vaslores 
+loop:	beq $t0, $zero, FIMSOMA #Inicia o looping
+	addi $t0, $t0, -1 #Sutrai 4 no TAM 
+	lw $t5, 0($t1) #Carrega o valor que est√° equivalente pelo valor TAM em T1 para t5
+	lw $t6, 0($t2) #Carrega o valor que est√° equivalente pelo valor TAM em T2 para t6 
+	addi $t1, $t1, 4
+	addi $t2, $t2, 4
+	add $t7, $t5, $t6 #Soma os vaslores 
+	sw  $t7, 0($t3)
+	addi $t3, $t3, 4
 	j loop
 FIMSOMA:
 
