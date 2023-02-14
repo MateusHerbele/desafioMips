@@ -1,1 +1,1 @@
-A minha autoria desse código se localiza apenas na parte limitada após a descrição "Coloque seu códgio aqui", tanto o final quanto a declaração das variáveis são de autoria do professor Marco Zanata - UFPR
+A minha autoria desse código se localiza apenas na parte limitada após a descrição "Escreva aqui seu código", tanto o final quanto a declaração das variáveis são de autoria do professor Marco Zanata - UFPR
